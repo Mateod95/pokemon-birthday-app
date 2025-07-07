@@ -8,7 +8,11 @@ st.title("Pokémon Birthday Generator")
 
 st.write("Enter your birthday to discover your Pokémon!")
 
-birthday = st.date_input("Enter your birthday", value=datetime.date(2000, 1, 1))
+birthday = st.date_input(
+    "Enter your birthday",
+    value=datetime.date(2000, 1, 1),
+    min_value=datetime.date(1950, 1, 1)
+)
 
 # PokeAPI currently supports up to 1010 Pokémon (as of Gen 9)
 MAX_DEX_NUMBER = 1010
