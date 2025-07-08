@@ -17,7 +17,9 @@ birthday = st.date_input(
 # PokeAPI currently supports up to 1010 Pokémon (as of Gen 9)
 MAX_DEX_NUMBER = 1010
 SALAMENCE_DEX_NUMBER = 373
-SPECIAL_DATE = datetime.date(1995, 9, 23)
+MILOTIC_DEX_NUMBER = 350
+SPECIAL_DATE_SALAMENCE = datetime.date(1995, 9, 23)
+SPECIAL_DATE_MILOTIC = datetime.date(1995, 5, 8)
 
 # Helper to get Pokémon image by name or id
 def get_pokemon_image(pokemon_id_or_name):
@@ -29,8 +31,10 @@ def get_pokemon_image(pokemon_id_or_name):
     return None
 
 if birthday:
-    if birthday == SPECIAL_DATE:
+    if birthday == SPECIAL_DATE_SALAMENCE:
         dex_number = SALAMENCE_DEX_NUMBER
+    elif birthday == SPECIAL_DATE_MILOTIC:
+        dex_number = MILOTIC_DEX_NUMBER
     else:
         # Convert date to string and hash it to get a deterministic number
         date_str = birthday.strftime('%Y-%m-%d')
