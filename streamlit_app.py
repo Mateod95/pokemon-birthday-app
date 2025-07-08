@@ -31,6 +31,7 @@ def get_pokemon_image(pokemon_id_or_name):
     return None
 
 if birthday:
+    #st.write(f"DEBUG: birthday={birthday}, SPECIAL_DATE_MILOTIC={SPECIAL_DATE_MILOTIC}, eq={birthday == SPECIAL_DATE_MILOTIC}")
     if birthday == SPECIAL_DATE_SALAMENCE:
         dex_number = SALAMENCE_DEX_NUMBER
     elif birthday == SPECIAL_DATE_MILOTIC:
